@@ -9,7 +9,7 @@ library(ape)
 library(ggplot2)
 library(dplyr)
 
-## Introduction
+## Docs for REHH for easy reference:
 
 # This document presents an analysis of Extended Haplotype Homozygosity (EHH) and Integrated Haplotype Homozygosity (IHH) in Plasmodium falciparum genomic data, focusing on the kelch-13 622I mutation and its potential co-selected alleles.
 
@@ -18,7 +18,7 @@ library(dplyr)
 # hap_file: This is the path to your VCF file. Make sure the path is correctly specified.
 # 
 # min_perc_geno.mrk: This parameter sets the minimum percentage of genotype information required for a marker (SNP) to be included in the analysis. Setting it to 70 means that any SNP with less than 70% genotype information across all 
-samples will be excluded. This is a way to filter out SNPs with too much missing data.
+# samples will be excluded. This is a way to filter out SNPs with too much missing data.
 # 
 # vcf_reader: Specifies the method used to read the VCF file. Using "data.table" is a good choice for larger datasets as it is efficient and fast.
 # 
@@ -27,7 +27,7 @@ samples will be excluded. This is a way to filter out SNPs with too much missing
 # polarize_vcf: If set to FALSE, the VCF file will not be polarized. Polarization is about aligning alleles with a reference. If your analysis doesn’t require this or if it’s already been done, you can set it to FALSE.
 # 
 # remove_multiple_markers: If this parameter is included and set to TRUE, it would remove positions with more than one marker (e.g., multiallelic sites). This can be important because rehh is designed to work with biallelic markers. If 
-your VCF contains multiallelic sites, you might want to set this to TRUE.
+# your VCF contains multiallelic sites, you might want to set this to TRUE.
 # 
 # Other parameters you might consider include:
 # 
@@ -80,7 +80,7 @@ library(ggplot2)
 library(dplyr)
 
 # Load VCF data
-vcf_path <- "/Users/george/Bailey_lab/ugandan_k13_selection_project/sWGS_files/vcfs/chr13_norm.COI2orbelow.update.norm.SNPs.merged.ploidyfix.missgeno5.maf1.vcf.gz" # Replace with your VCF file path
+vcf_path <- "/Users/george/Bailey_lab/ugandan_k13_selection_project/sWGS_files/vcfs/chr13_norm.COI2orbelow.update.norm.SNPs.merged.ploidyfix.missgeno5.maf1.vcf.gz" 
 
 # question - are these phased - if not, do they need to be
 # question - are these polaized to reference, if not do they need to be - try polarize_vcf=T
